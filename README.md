@@ -1,49 +1,25 @@
-<img align="right" src="https://github.com/ada-school/module-template/blob/main/ada.png">
+# Configuracion Swagger
 
-## Codelab 🧪 Implementing a REST API Service
+### Santiago Fetecua - Juan David Martinez
 
-Implement different REST API Services to support a store products management system, implementing each CRUD Operation
-with Pagination for each service (Users and Products):
+Para hacer la configuracion del Swagger realizamos los siguientes pasos
 
-- Create
-- Read
-- Update
-- Delete
+Colocamos la siguiente clase
 
-👉 Aim to reach the [Glory of Rest](https://martinfowler.com/articles/richardsonMaturityModel.html).
+[![Whats-App-Image-2023-02-21-at-8-00-45-PM.jpg](https://i.postimg.cc/ZRmjTtnF/Whats-App-Image-2023-02-21-at-8-00-45-PM.jpg)](https://postimg.cc/v1P5zKWc)
 
-👉 Use the correct methods and status codes
-of [HTTP Protocol](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP).
+Al revisar la documentación del API REST que se nos genero el siguientes JSON
 
-👉 It should have at least have
-the [Level 2 - HTTP Verbs of Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html).
+[![Whats-App-Image-2023-02-21-at-7-59-29-PM.jpg](https://i.postimg.cc/ZR0Fcrf2/Whats-App-Image-2023-02-21-at-7-59-29-PM.jpg)](https://postimg.cc/zbZgDRYF)
 
-**Programming Language**:- Java.
+Luego para implementar la interfaz grafica colocamos la siguientes clase
 
-**Framework:** Spring Boot.
+[![Whats-App-Image-2023-02-21-at-8-01-08-PM.jpg](https://i.postimg.cc/j27jv96m/Whats-App-Image-2023-02-21-at-8-01-08-PM.jpg)](https://postimg.cc/N2QYjdzk)
 
-**Database:** MongoDB.
+Y para terminar se agrego la siguiente linea a el recurso application.properties
 
-**Learning Objectives**
+[![Whats-App-Image-2023-02-21-at-8-06-41-PM.jpg](https://i.postimg.cc/dV4yxhTY/Whats-App-Image-2023-02-21-at-8-06-41-PM.jpg)](https://postimg.cc/rDRsdFJn)
 
-- [ ]  Use the Richardson Maturity Model to implement a REST API Service.
-- [ ]  Implement a REST API Service using Spring Boot.
-- [ ]  Implement CRUD Operations.
+ Y pudimos ver las especificaciones para la API REST de Spring
 
-## Detail Orientation 🤹🏽
-
-Good code is about details. Follow each step carefully and make sure your code is clean and readable.
-
-**Main Topics**
-
-* Microservices.
-* REST API.
-* MongoDB.
-* Java.
-* Spring Boot.
-
-## Codelab 🧪
-
-🗣️ "I hear and I forget I see and I remember I do and I understand." Confucius
-
-
+ [![Whats-App-Image-2023-02-21-at-7-58-58-PM.jpg](https://i.postimg.cc/zDbFHFHR/Whats-App-Image-2023-02-21-at-7-58-58-PM.jpg)](https://postimg.cc/qgr39nLk)
