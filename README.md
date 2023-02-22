@@ -23,3 +23,9 @@ Y para terminar se agrego la siguiente linea a el recurso application.properties
  Y pudimos ver las especificaciones para la API REST de Spring
 
  [![Whats-App-Image-2023-02-21-at-7-58-58-PM.jpg](https://i.postimg.cc/zDbFHFHR/Whats-App-Image-2023-02-21-at-7-58-58-PM.jpg)](https://postimg.cc/qgr39nLk)
+ 
+ 
+ [![Whats-App-Image-2023-02-21-at-8-03-55-PM.jpg](https://i.postimg.cc/HndStJyy/Whats-App-Image-2023-02-21-at-8-03-55-PM.jpg)](https://postimg.cc/WFY6N1SN)
+ 
+ 
+ [![Whats-App-Image-2023-02-21-at-8-04-41-PM.jpg](https://i.postimg.cc/GmHXznHq/Whats-App-Image-2023-02-21-at-8-04-41-PM.jpg)](https://postimg.cc/68xV5SVv)
