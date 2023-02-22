@@ -1,11 +1,13 @@
 package org.adaschool.api.controller.user;
 
+import org.adaschool.api.exception.UserNotFoundException;
 import org.adaschool.api.repository.user.User;
+import org.adaschool.api.repository.user.UserDto;
 import org.adaschool.api.service.user.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
@@ -13,6 +15,7 @@ import java.util.List;
 @RequestMapping("/v1/users/")
 public class UsersController {
 
+    @Autowired
     private final UsersService usersService;
 
     public UsersController(@Autowired UsersService usersService) {
@@ -20,33 +23,36 @@ public class UsersController {
     }
 
     @PostMapping
-    public ResponseEntity<User> createUser() {
-        //TODO implement this method
-        URI createdUserUri = URI.create("");
-        return ResponseEntity.created(createdUserUri).body(null);
+    public ResponseEntity<User> createUser(@RequestBody UserDto userDto) {
+        User userCreated = usersService.save(new User(userDto));
+        URI createdUserUri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(userCreated.getId()).toUri();
+        return ResponseEntity.created(createdUserUri).body(userCreated);
     }
 
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
-        //TODO implement this method
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(usersService.all());
     }
 
     @GetMapping("{id}")
     public ResponseEntity<User> findById(@PathVariable("id") String id) {
-        //TODO implement this method
-        return ResponseEntity.ok(null);
+        User findUser = usersService.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        return ResponseEntity.ok(findUser);
     }
 
-    @PutMapping
-    public ResponseEntity<User> updateUser() {
-        //TODO implement this method
-        return ResponseEntity.ok(null);
+    @PutMapping("{id}")
+    public ResponseEntity<User> updateUser(@PathVariable("id") String id, @RequestBody UserDto userDto) {
+        User userUpdate = usersService.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        User userUpdated = usersService.update(new User(userDto), id);
+        usersService.save(userUpdate);
+        return ResponseEntity.ok(userUpdated);
     }
 
-    @DeleteMapping
-    public ResponseEntity<Void> deleteUser() {
-        //TODO implement this method
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable("id") String id) {
+        usersService.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        usersService.deleteById(id);
         return ResponseEntity.ok().build();
     }
 }
